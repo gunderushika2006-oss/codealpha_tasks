@@ -3,63 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Image Gallery</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>My Image Gallery</h1>
-        <p>Explore Beautiful Moments</p>
-    </header>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
 
-    <div class="filters">
-        <button onclick="filterImages('all')">All</button>
-        <button onclick="filterImages('nature')">Nature</button>
-        <button onclick="filterImages('city')">City</button>
-        <button onclick="filterImages('animals')">Animals</button>
-    </div>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">⌫</button>
+            <button onclick="appendValue('%')">%</button>
+            <button onclick="appendValue('/')">÷</button>
 
-    <div class="gallery">
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('*')">×</button>
 
-        <div class="gallery-item nature">
-    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800" alt="Nature" onclick="openLightbox(0)">
-</div>
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('-')">−</button>
 
-<div class="gallery-item nature">
-    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800" alt="Nature" onclick="openLightbox(1)">
-</div>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('+')">+</button>
 
-<div class="gallery-item city">
-    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800" alt="City" onclick="openLightbox(2)">
-</div>
-
-<div class="gallery-item city">
-    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="City" onclick="openLightbox(3)">
-</div>
-
-<div class="gallery-item animals">
-    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=800" alt="Dog" onclick="openLightbox(4)">
-</div>
-
-<div class="gallery-item animals">
-    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800" alt="Dog" onclick="openLightbox(5)">
+            <button onclick="appendValue('0')" class="zero">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="calculate()">=</button>
         </div>
-
-    <div id="lightbox" class="lightbox">
-
-        <span class="close" onclick="closeLightbox()">&times;</span>
-
-        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-
-        <img id="lightbox-image" src="" alt="Large Image">
-
-        <button class="next" onclick="changeImage(1)">&#10095;</button>
-
     </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
